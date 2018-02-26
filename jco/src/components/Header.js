@@ -11,7 +11,7 @@ export default class Header extends Component{
             <nav className="navbar navbar-inverse">
                 <div className="container-fluid">
                     <div className="navbar-header">
-                        <h1 id='nav-header'>THE DONALD J. TRUMP CLICKY GAME</h1>
+                        <h1 id='nav-header'>TRUMPY CLICK</h1>
                     </div>
                 </div>
             </nav>
