@@ -98,7 +98,7 @@ class ImageTile extends Component{
     render(){
         return (
             <div className='col-xs-4'>
-                <h5><b>DONALD J. TRUMP</b></h5>
+                <span>{this.state.posId},{this.state.tileId}</span>
                 <img onClick={this.handleClick} src={this.state.tSrc} className="img-circle" height='160' width='180' alt="Trump1"/>
             </div>
         )
