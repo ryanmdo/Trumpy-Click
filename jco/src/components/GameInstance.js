@@ -18,22 +18,40 @@ class GameInstance extends Component{
         return(
         <div>
             <div className='row'>
-                <ImageTile pos='./img/trump2.png'/>
+                <div className='col-md-2'>
                 <ImageTile/>
+                </div>
+                <div className='col-md-2'>
                 <ImageTile/>
+                </div>
+                <div className='col-md-2'>
+                <ImageTile/>
+                </div>
                 GameInstance Row 1
             </div>
 
             <div className='row'>
+            <div className='col-md-2'>
                 <ImageTile/>
+                </div>
+                <div className='col-md-2'>
                 <ImageTile/>
+                </div>
+                <div className='col-md-2'>
                 <ImageTile/>
+                </div>
                 GameInstance Row 2
             </div>
             <div className='row'>
+            <div className='col-md-2'>
                 <ImageTile/>
+                </div>
+                <div className='col-md-2'>
                 <ImageTile/>
+                </div>
+                <div className='col-md-2'>
                 <ImageTile/>
+                </div>
                 GameInstance Row 3
             </div>
         </div>

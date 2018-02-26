@@ -3,21 +3,19 @@ import React, {Component} from 'react';
 
 class ImageTile extends Component{
     
-        constructor(props){
-        super(props)
-        this.state={
-            
-        }
+    constructor(props){
+    super(props);
+    this.state={
+            imgSrc:"./img/t4.png"
+        };
     }
 
     render(){
         return(
-            <div className='col-md-2'>
-                    <img src='./img/t1.png' alt='trump1' className='img-thumbnail'/>
-                    <img src={this.state.pos} alt='trump1' className='img-thumbnail'/>
-            </div>
+            
+                <img src={this.state.imgSrc} className="rounded" alt="..."/>
         )
-    }
+    };
 
 }
 
