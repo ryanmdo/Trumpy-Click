@@ -20,17 +20,17 @@ class GameInstance extends Component{
             <div className='row'>
                 <ImageTile tileId={1}/>
                 <ImageTile tileId={2}/>
-                <ImageTile/>
+                <ImageTile tileId={3}/>
             </div>
             <div className='row'>
-                <ImageTile/>
-                <ImageTile/>
-                <ImageTile/>
+                <ImageTile tileId={4}/>
+                <ImageTile tileId={5}/>
+                <ImageTile tileId={6}/>
             </div>
             <div className='row'>
-                <ImageTile/>
-                <ImageTile/>
-                <ImageTile/>
+                <ImageTile tileId={7}/>
+                <ImageTile tileId={8}/>
+                <ImageTile tileId={9}/>
             </div>
         </div>
         )
