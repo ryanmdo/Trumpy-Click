@@ -12,8 +12,9 @@ class ImageTile extends Component{
 
     render(){
         return(
-            <div className='col-md-3'>
-                Image Tile
+            <div className='col-md-2'>
+                    <img src='./img/t1.png' alt='trump1' className='img-thumbnail'/>
+                    <img src={this.state.pos} alt='trump1' className='img-thumbnail'/>
             </div>
         )
     }

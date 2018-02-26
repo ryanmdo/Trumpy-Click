@@ -18,7 +18,7 @@ class GameInstance extends Component{
         return(
         <div>
             <div className='row'>
-                <ImageTile/>
+                <ImageTile pos='./img/trump2.png'/>
                 <ImageTile/>
                 <ImageTile/>
                 GameInstance Row 1
