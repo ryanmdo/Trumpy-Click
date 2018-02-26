@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import GameInstance from './components/GameInstance'
+//import ImageTile from './components/ImageTile'
 
 
 

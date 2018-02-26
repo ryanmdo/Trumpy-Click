@@ -16,43 +16,21 @@ class GameInstance extends Component{
 
     render(){
         return(
-        <div>
+        <div className='container'>
             <div className='row'>
-                <div className='col-md-2'>
+                <ImageTile tileId={1}/>
+                <ImageTile tileId={2}/>
                 <ImageTile/>
-                </div>
-                <div className='col-md-2'>
-                <ImageTile/>
-                </div>
-                <div className='col-md-2'>
-                <ImageTile/>
-                </div>
-                GameInstance Row 1
-            </div>
-
-            <div className='row'>
-            <div className='col-md-2'>
-                <ImageTile/>
-                </div>
-                <div className='col-md-2'>
-                <ImageTile/>
-                </div>
-                <div className='col-md-2'>
-                <ImageTile/>
-                </div>
-                GameInstance Row 2
             </div>
             <div className='row'>
-            <div className='col-md-2'>
                 <ImageTile/>
-                </div>
-                <div className='col-md-2'>
                 <ImageTile/>
-                </div>
-                <div className='col-md-2'>
                 <ImageTile/>
-                </div>
-                GameInstance Row 3
+            </div>
+            <div className='row'>
+                <ImageTile/>
+                <ImageTile/>
+                <ImageTile/>
             </div>
         </div>
         )
