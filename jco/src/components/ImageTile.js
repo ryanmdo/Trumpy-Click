@@ -15,26 +15,29 @@ class ImageTile extends Component{
                 t5:"https://cdn.cnn.com/cnnnext/dam/assets/160419184334-donald-trump-release-tax-returns-cnnmoney-orig-00022605.jpg",
                 t6:"https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2017/12/28/09/trump.jpg",
                 t7:"http://www.slate.com/content/dam/slate/articles/news_and_politics/politics/2015/10/151007_POL_Donald-Trump-Free_Media.jpg.CROP.promo-xlarge2.jpg",
-                t8:"https://www.mwcboard.com/uploads/monthly_2018_01/trump_small_hands.jpg.4bfaea8c8c8d000d82ef7be1dc98c93b.jpg",
-                t9:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUo_tYfboLDnZyH1UF_dGR91ykBvK6FgIHm4mXokVQHokeoz4GBg"
-            
-            
+                t8:"https://www.mwcboard.com/uploads/monthly_2018_01/trump_small_hands.jpg.4bfaea8c8c8d000d82ef7be1dc98c93b.jpg",            
             },
 
-            tSrc:""
+            tSrc:"",
+            tileId:this.props.tileId,
+
 
         };
 
+        this.handleClick=this.handleClick.bind(this);
+
     }
+
+
 
     componentDidMount(){
 
         //attach the proper image src accord to the passed-through tileId.
         
-        console.log(this.props.tileId)
+        console.log(this.state)
         if(this.props.tileId===1){
             this.setState({
-                tSrc:this.state.srcArr.t1
+                tSrc:this.state.srcArr.t1,
             })
             return;
         } else if (this.props.tileId===2){
@@ -84,13 +87,16 @@ class ImageTile extends Component{
         console.log('ImageTile mounted')
     }
 
+    handleClick(e){
+        console.log(this.state.tileId+' has been clicked.')
+        //console.log(e)
+    }
+
     render(){
         return (
-            <div className='col-xs-2'>
-                <span value={this.state.tileId}>
-                    {this.props.tileId}
-                </span>
-                <img src={this.state.tSrc} className="img-responsive"  alt="Trump1"/>
+            <div className='col-xs-4'>
+                <h5><b>DONALD J. TRUMP</b></h5>
+                <img onClick={this.handleClick} src={this.state.tSrc} className="img-responsive"  alt="Trump1"/>
             </div>
         )
     };

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import ImageTile from './ImageTile';
+import SidePanel from './SidePanel';
 
 
 class GameInstance extends Component{
@@ -17,6 +18,12 @@ class GameInstance extends Component{
     render(){
         return(
         <div className='container'>
+        
+        <div className='col-md-6'>
+            <SidePanel/>
+        </div>
+
+        <div className='col-md-6'>
             <div className='row'>
                 <ImageTile tileId={1}/>
                 <ImageTile tileId={2}/>
@@ -32,6 +39,10 @@ class GameInstance extends Component{
                 <ImageTile tileId={8}/>
                 <ImageTile tileId={9}/>
             </div>
+        </div>
+
+        
+
         </div>
         )
     }
