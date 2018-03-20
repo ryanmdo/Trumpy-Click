@@ -58,7 +58,16 @@ class GameInstance extends Component{
 
 
          this.setState({
-            pos1TileId: randomIdArr[5],
+            pos1TileId: randomIdArr[0],
+            pos2TileId: randomIdArr[1],
+            pos3TileId: randomIdArr[2],
+            pos4TileId: randomIdArr[3],
+            pos5TileId: randomIdArr[4],
+            pos6TileId: randomIdArr[5],
+            pos7TileId: randomIdArr[6],
+            pos8TileId: randomIdArr[7],
+            pos9TileId: randomIdArr[8],
+
          })
 
          console.log(this.state.pos1TileId)
@@ -83,18 +92,18 @@ class GameInstance extends Component{
         <div className='col-md-6'>
             <div className='row'>
                 <ImageTile handleTileClick={this.onClick} posId={1} tileId={this.state.pos1TileId}/>
-                <ImageTile posId={2}/>
-                <ImageTile posId={3} tileId={3}/>
+                <ImageTile handleTileClick={this.onClick} posId={2} tileId={this.state.pos2TileId}/>
+                <ImageTile handleTileClick={this.onClick} posId={3} tileId={this.state.pos3TileId}/>
             </div>
             <div className='row'>
-                <ImageTile posId={4} tileId={4}/>
-                <ImageTile posId={5} tileId={5}/>
-                <ImageTile posId={6} tileId={6}/>
+                <ImageTile handleTileClick={this.onClick} posId={4} tileId={this.state.pos4TileId}/>
+                <ImageTile handleTileClick={this.onClick} posId={5} tileId={this.state.pos5TileId}/>
+                <ImageTile handleTileClick={this.onClick} posId={6} tileId={this.state.pos6TileId}/>
             </div>
             <div className='row'>
-                <ImageTile posId={7} tileId={7}/>
-                <ImageTile posId={8} tileId={8}/>
-                <ImageTile posId={9} tileId={9}/>
+                <ImageTile handleTileClick={this.onClick} posId={7} tileId={this.state.pos7TileId}/>
+                <ImageTile handleTileClick={this.onClick} posId={8} tileId={this.state.pos8TileId}/>
+                <ImageTile handleTileClick={this.onClick} posId={9} tileId={this.state.pos9TileId}/>
             </div>
         </div>
 
