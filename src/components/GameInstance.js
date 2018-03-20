@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
-
 import ImageTile from './ImageTile';
 import SidePanel from './SidePanel';
+
+
+
+
 
 
 class GameInstance extends Component{
@@ -11,11 +14,17 @@ class GameInstance extends Component{
 
     }
 
+    //This should be the one that handles the click of a tile... I think.
+    handleTileClick(){
+        console.log('GameInstance knows that a tile has been clicked')
+    }
+
 
     constructor(props){
         super(props)
+        //console.log(tileIdArr)
         this.state={
-            pos1TileId:'',
+            pos1TileId:7,
             pos2TileId:'',
             pos3TileId:'',
             pos4TileId:'',
@@ -24,7 +33,7 @@ class GameInstance extends Component{
             pos7TileId:'',
             pos8TileId:'',
             pos9TileId:'',
-            tileIdArr:[3]
+            tileIdArr:{}
         }
 
         this.randomizeTiles=this.randomizeTiles.bind(this);
@@ -40,14 +49,21 @@ class GameInstance extends Component{
             var randIndex=Math.floor(Math.random()*starterArr.length)
             randomIdArr.push(starterArr[randIndex])
             starterArr.splice(randIndex,1)
+            
         }
 
+
+
         console.log('randomIdArr:'+randomIdArr)
-        
+
+
          this.setState({
-            tileIdArr:randomIdArr,
+            pos1TileId: randomIdArr[5],
          })
-        console.log('this.state.tileIdArr: '+this.state.tileIdArr)
+
+         console.log(this.state.pos1TileId)
+         return randomIdArr;
+        //console.log('this.state.tileIdArr: '+this.state.tileIdArr)
         //console.log('randomized array is:'+randomizedArr)
     }
     
@@ -66,7 +82,7 @@ class GameInstance extends Component{
 
         <div className='col-md-6'>
             <div className='row'>
-                <ImageTile posId={1} tileId={this.state.tileIdArr[0]}/>
+                <ImageTile handleTileClick={this.onClick} posId={1} tileId={this.state.pos1TileId}/>
                 <ImageTile posId={2}/>
                 <ImageTile posId={3} tileId={3}/>
             </div>

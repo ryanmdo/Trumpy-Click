@@ -28,7 +28,7 @@ class ImageTile extends Component{
 
         this.handleClick=this.handleClick.bind(this);
 
-    }
+    }   
 
 
 
@@ -37,69 +37,58 @@ class ImageTile extends Component{
         //attach the proper image src accord to the passed-through tileId.
         
         //console.log(this.state)
-        console.log('Image at pos:'+this.state.posId)
+        console.log('pos:'+this.state.posId+'-tileId:'+this.state.tileId)
         if(this.props.tileId===1){
-            this.setState({
-                tSrc:this.state.srcArr.t1,
-            })
+            this.setState({tSrc:this.state.srcArr.t1})
             return;
         } else if (this.props.tileId===2){
-            this.setState({
-                tSrc:this.state.srcArr.t2
-            })
+            this.setState({tSrc:this.state.srcArr.t2})
             return;
         } else if (this.props.tileId===3){
-            this.setState({
-                tSrc:this.state.srcArr.t3
-            })
+            this.setState({tSrc:this.state.srcArr.t3})
             return;
         } else if (this.props.tileId===4){
-            this.setState({
-                tSrc:this.state.srcArr.t4
-            })
+            this.setState({tSrc:this.state.srcArr.t4})
             return;
         } else if (this.props.tileId===5){
-            this.setState({
-                tSrc:this.state.srcArr.t5
-            })
+            this.setState({tSrc:this.state.srcArr.t5})
             return;
         } else if (this.props.tileId===6){
-            this.setState({
-                tSrc:this.state.srcArr.t6
-            })
+            this.setState({tSrc:this.state.srcArr.t6})
             return;
         } else if (this.props.tileId===7){
-            this.setState({
-                tSrc:this.state.srcArr.t7
-            })
+            this.setState({tSrc:this.state.srcArr.t7})
             return;
         } else if (this.props.tileId===8){
-            this.setState({
-                tSrc:this.state.srcArr.t8
-            })
+            this.setState({tSrc:this.state.srcArr.t8})
             return;
         } else if (this.props.tileId===9){
-            this.setState({
-                tSrc:this.state.srcArr.t9
-            })
+            this.setState({tSrc:this.state.srcArr.t9})
             return;
         } else {
             console.log('an invalid tileId has been passed through')
         }
 
-        console.log('ImageTile mounted')
     }
 
     handleClick(e){
-        console.log(this.state.tileId+' has been clicked.')
+        console.log('pos:'+this.state.posId+'-tileId:'+this.state.tileId+' has been clicked.')
         //console.log(e)
     }
+
+    //is invoked just before rendering when new props or state are being received. Use this as an opportunity to perform preparation before an update occurs. This method is not called for the initial render.
+    componentWillUpdate(nextProps, nextState){
+
+
+    }
+
+
 
     render(){
         return (
             <div className='col-xs-4'>
-                <span>{this.state.posId},{this.state.tileId}</span>
-                <img onClick={this.handleClick} src={this.state.tSrc} className="img-circle" height='160' width='180' alt="Trump1"/>
+                <span>pos: {this.state.posId}, tile: {this.state.tileId}</span>
+                <img onClick={this.handleClick} src={this.state.tSrc} className="img-circle" height='160' width='180' alt={this.state.tileId}/>
             </div>
         )
     };
